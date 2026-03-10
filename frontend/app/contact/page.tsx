@@ -147,6 +147,17 @@ export default function ContactPage() {
                   @digitall_orbit
                 </a>
               </p>
+              <p>
+                LinkedIn:{" "}
+                <a
+                  href="https://www.linkedin.com/company/digitalorbit2k26"
+                  className="text-mint underline-offset-4 hover:underline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  digitalorbit2k26
+                </a>
+              </p>
               <p>Response Time: Usually within 24 hours.</p>
             </div>
           </article>
