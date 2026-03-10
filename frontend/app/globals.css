@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-base bg-orbital text-slate-100 antialiased;
+}
+
+.wrapper {
+  @apply mx-auto w-[min(1120px,92%)] py-16;
+}
+
+.title-xl {
+  @apply font-space text-4xl font-semibold leading-tight md:text-5xl;
+}
+
+.title-lg {
+  @apply font-space text-3xl font-semibold leading-tight md:text-4xl;
+}
+
+.subtitle {
+  @apply mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-mint;
+}
+
+.panel {
+  @apply rounded-2xl border border-line bg-panel/90 p-6;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-brand to-mint px-5 py-3 text-sm font-bold text-slate-900 shadow-glow transition hover:-translate-y-0.5;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center rounded-xl border border-line bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5;
+}
