@@ -121,19 +121,30 @@ export default function ContactPage() {
             <div className="mt-4 space-y-3 text-slate-300">
               <p>
                 Email:{" "}
-                <a href="mailto:hello@digitalorbit.dev" className="text-mint underline-offset-4 hover:underline">
-                  hello@digitalorbit.dev
+                <a href="mailto:rbomma074@gmail.com" className="text-mint underline-offset-4 hover:underline">
+                  rbomma074@gmail.com
                 </a>
               </p>
               <p>
                 WhatsApp:{" "}
                 <a
-                  href="https://wa.me/919999999999"
+                  href="https://wa.me/916304679550"
                   className="text-mint underline-offset-4 hover:underline"
                   target="_blank"
                   rel="noreferrer"
                 >
                   Chat on WhatsApp
+                </a>
+              </p>
+              <p>
+                Instagram:{" "}
+                <a
+                  href="https://www.instagram.com/digitall_orbit?igsh=cnNndzUzMjVvMWJz"
+                  className="text-mint underline-offset-4 hover:underline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  @digitall_orbit
                 </a>
               </p>
               <p>Response Time: Usually within 24 hours.</p>
