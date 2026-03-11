@@ -54,26 +54,121 @@ export const processSteps = [
   }
 ];
 
-export const portfolioItems = [
+export type ProjectItem = {
+  title: string;
+  subtitle?: string;
+  description: string;
+  type: string;
+  platform?: string;
+  features: string[];
+  tech: string[];
+  status?: string;
+  category: "Mobile Applications" | "Web Applications";
+  liveDemo?: string;
+  caseStudy?: string;
+  github?: string;
+  flagship?: boolean;
+};
+
+export const portfolioItems: ProjectItem[] = [
   {
-    title: "Portfolio Websites",
-    description: "Personal brand platforms for students and professionals.",
-    tech: ["Next.js", "Tailwind CSS", "Vercel"]
+    title: "ORIN - AI Career Mentorship Mobile App",
+    subtitle: "Flagship Product",
+    description:
+      "ORIN is a career mentorship and growth platform that connects students with mentors, provides AI-powered tools, and enables community-based learning.",
+    type: "Mobile Application",
+    platform: "Android APK",
+    features: [
+      "Mentor discovery and booking",
+      "Social learning feed",
+      "AI-powered career guidance",
+      "Community discussions",
+      "Daily quiz and reputation system"
+    ],
+    tech: ["React Native", "Expo", "Firebase / Node backend", "AI Integration"],
+    status: "Production-ready APK",
+    category: "Mobile Applications",
+    caseStudy: "/contact",
+    flagship: true
   },
   {
-    title: "Startup Landing Pages",
-    description: "High-conversion pages for startup launches and waitlists.",
-    tech: ["React", "SEO", "Analytics"]
+    title: "Cyber Security Corporate Website",
+    description:
+      "A modern cybersecurity company website showcasing services, security solutions, and professional corporate branding.",
+    type: "Web Application",
+    features: [
+      "Hero landing page",
+      "Services section",
+      "Security solutions overview",
+      "Contact form",
+      "Fully responsive design"
+    ],
+    tech: ["React / Next.js", "Tailwind CSS", "Modern UI components"],
+    category: "Web Applications",
+    liveDemo: "https://cyber-three-green.vercel.app",
+    caseStudy: "/contact"
   },
   {
-    title: "App UI Designs",
-    description: "Mobile and web interface systems focused on product clarity.",
-    tech: ["Figma", "Design System", "Prototyping"]
+    title: "Samskruti Engineering College Website",
+    description:
+      "A modern educational institution website providing course information, campus details, and admission information.",
+    type: "Web Application",
+    features: [
+      "Courses and departments",
+      "Faculty information",
+      "Campus highlights",
+      "Admission information",
+      "Student-friendly navigation"
+    ],
+    tech: ["Next.js", "Tailwind CSS", "Responsive design"],
+    category: "Web Applications",
+    liveDemo: "https://samskruti.vercel.app",
+    caseStudy: "/contact"
   },
   {
-    title: "Digital Platforms",
-    description: "Scalable platforms with dashboards and customer workflows.",
-    tech: ["Node.js", "Express", "PostgreSQL"]
+    title: "LifeCare Hospital Website",
+    description:
+      "A professional healthcare website designed for hospitals and clinics with appointment and service sections.",
+    type: "Web Application",
+    features: [
+      "Doctor profiles",
+      "Medical services",
+      "Appointment section",
+      "Emergency contact",
+      "Patient information"
+    ],
+    tech: ["Next.js", "Tailwind CSS", "Modern UI design"],
+    category: "Web Applications",
+    liveDemo: "https://hospital-one-drab.vercel.app",
+    caseStudy: "/contact"
+  },
+  {
+    title: "Restaurant and Food Business Website",
+    description:
+      "A modern restaurant website for food businesses featuring menu display, food gallery, and contact options.",
+    type: "Web Application",
+    features: [
+      "Online menu",
+      "Food gallery",
+      "Restaurant information",
+      "Reservation/contact",
+      "Mobile responsive"
+    ],
+    tech: ["Next.js", "Tailwind CSS"],
+    category: "Web Applications",
+    liveDemo: "https://restaurants-nu.vercel.app",
+    caseStudy: "/contact"
+  },
+  {
+    title: "Developer Portfolio Website",
+    description:
+      "A professional portfolio website designed for developers or freelancers to showcase projects, skills, and experience.",
+    type: "Web Application",
+    features: ["About section", "Skills showcase", "Project gallery", "Contact form", "Modern design"],
+    tech: ["React", "Tailwind CSS", "Framer Motion animations"],
+    category: "Web Applications",
+    liveDemo: "https://portfolio-black-gamma-53.vercel.app",
+    caseStudy: "/contact"
   }
 ];
 
