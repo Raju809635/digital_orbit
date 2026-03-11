@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   const mobileProjects = portfolioItems.filter((project) => project.category === "Mobile Applications");
   const webProjects = portfolioItems.filter((project) => project.category === "Web Applications");
+  const getPrimaryLink = (liveDemo?: string, caseStudy?: string) => liveDemo || caseStudy;
 
   return (
     <main>
@@ -50,7 +51,10 @@ export default function PortfolioPage() {
         <h2 className="font-space text-3xl font-semibold">Mobile Applications</h2>
         <div className="mt-4 grid gap-4">
           {mobileProjects.map((project) => (
-            <article key={project.title} className="panel border-mint/40 bg-panelSoft">
+            <article
+              key={project.title}
+              className="panel relative border-mint/40 bg-panelSoft transition hover:border-brand/40"
+            >
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <h3 className="font-space text-2xl font-semibold">{project.title}</h3>
                 {project.flagship ? (
@@ -87,7 +91,24 @@ export default function PortfolioPage() {
                   </span>
                 ))}
               </div>
-              <div className="mt-5 flex flex-wrap gap-3">
+              {getPrimaryLink(project.liveDemo, project.caseStudy) ? (
+                getPrimaryLink(project.liveDemo, project.caseStudy)?.startsWith("http") ? (
+                  <a
+                    href={getPrimaryLink(project.liveDemo, project.caseStudy)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="absolute inset-0 rounded-2xl"
+                    aria-label={`Open ${project.title}`}
+                  />
+                ) : (
+                  <Link
+                    href={String(getPrimaryLink(project.liveDemo, project.caseStudy))}
+                    className="absolute inset-0 rounded-2xl"
+                    aria-label={`Open ${project.title}`}
+                  />
+                )
+              ) : null}
+              <div className="relative z-10 mt-5 flex flex-wrap gap-3">
                 {project.liveDemo ? (
                   <a href={project.liveDemo} target="_blank" rel="noreferrer" className="btn-primary">
                     Live Demo
@@ -113,7 +134,7 @@ export default function PortfolioPage() {
         <h2 className="font-space text-3xl font-semibold">Web Applications</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           {webProjects.map((project) => (
-            <article key={project.title} className="panel">
+            <article key={project.title} className="panel relative transition hover:border-brand/40">
               <h3 className="font-space text-2xl font-semibold">{project.title}</h3>
               <p className="mt-3 text-slate-300">{project.description}</p>
               <ul className="mt-4 list-disc space-y-1 pl-5 text-slate-300 marker:text-mint">
@@ -128,7 +149,24 @@ export default function PortfolioPage() {
                   </span>
                 ))}
               </div>
-              <div className="mt-5 flex flex-wrap gap-3">
+              {getPrimaryLink(project.liveDemo, project.caseStudy) ? (
+                getPrimaryLink(project.liveDemo, project.caseStudy)?.startsWith("http") ? (
+                  <a
+                    href={getPrimaryLink(project.liveDemo, project.caseStudy)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="absolute inset-0 rounded-2xl"
+                    aria-label={`Open ${project.title}`}
+                  />
+                ) : (
+                  <Link
+                    href={String(getPrimaryLink(project.liveDemo, project.caseStudy))}
+                    className="absolute inset-0 rounded-2xl"
+                    aria-label={`Open ${project.title}`}
+                  />
+                )
+              ) : null}
+              <div className="relative z-10 mt-5 flex flex-wrap gap-3">
                 {project.liveDemo ? (
                   <a href={project.liveDemo} target="_blank" rel="noreferrer" className="btn-primary">
                     Live Demo
