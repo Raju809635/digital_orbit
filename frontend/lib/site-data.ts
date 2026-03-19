@@ -73,9 +73,9 @@ export type ProjectItem = {
 export const portfolioItems: ProjectItem[] = [
   {
     title: "ORIN - AI Career Mentorship Mobile App",
-    subtitle: "Flagship Product",
+    subtitle: "Sample Product / Demo Application",
     description:
-      "ORIN is a career mentorship and growth platform that connects students with mentors, provides AI-powered tools, and enables community-based learning.",
+      "Sample Product / Demo Application built by Digital Orbit. ORIN is a career mentorship and growth platform that connects students with mentors, provides AI-powered tools, and enables community-based learning.",
     type: "Mobile Application",
     platform: "Android APK",
     features: [
@@ -86,10 +86,10 @@ export const portfolioItems: ProjectItem[] = [
       "Daily quiz and reputation system"
     ],
     tech: ["React Native", "Expo", "Firebase / Node backend", "AI Integration"],
-    status: "Production-ready APK",
+    status: "Demo build available on request",
     category: "Mobile Applications",
     caseStudy: "/contact",
-    flagship: true
+    flagship: false
   },
   {
     title: "Cyber Security Corporate Website",
@@ -160,7 +160,7 @@ export const portfolioItems: ProjectItem[] = [
     caseStudy: "/contact"
   },
   {
-    title: "Developer Portfolio Website",
+    title: "Personal Portfolio Website (Sample)",
     description:
       "A professional portfolio website designed for developers or freelancers to showcase projects, skills, and experience.",
     type: "Web Application",

@@ -2,7 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
 import { MotionSection } from "@/components/MotionSection";
+import { ServiceCard } from "@/components/ServiceCard";
 import { portfolioItems } from "@/lib/site-data";
+import {
+  Building2,
+  GraduationCap,
+  HeartPulse,
+  ShoppingCart,
+  Sofa,
+  UserRound,
+  UtensilsCrossed
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -31,7 +41,7 @@ export default function PortfolioPage() {
           <div className="mt-5 grid gap-4 md:grid-cols-2">
             <div className="rounded-xl border border-line bg-white/5 p-4">
               <p className="text-sm font-semibold uppercase tracking-wide text-mint">Mobile Applications</p>
-              <p className="mt-2 text-slate-200">ORIN - AI Career Mentorship Platform</p>
+              <p className="mt-2 text-slate-200">ORIN - Sample AI Career Mentorship App</p>
             </div>
             <div className="rounded-xl border border-line bg-white/5 p-4">
               <p className="text-sm font-semibold uppercase tracking-wide text-mint">Web Applications</p>
@@ -40,11 +50,104 @@ export default function PortfolioPage() {
                 <li>College Institution Website</li>
                 <li>Hospital Management Website</li>
                 <li>Restaurant Business Website</li>
-                <li>Professional Portfolio Website</li>
+                <li>Portfolio Website (Sample)</li>
               </ul>
             </div>
           </div>
         </article>
+      </MotionSection>
+
+      <MotionSection className="wrapper py-6">
+        <p className="subtitle">Business Solutions We Build</p>
+        <h2 className="font-space text-3xl font-semibold">Websites for Real Industries</h2>
+        <p className="mt-3 max-w-3xl text-slate-300">
+          We build modern web applications and mobile apps tailored for startups and businesses.
+        </p>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <ServiceCard
+            title="Furniture Store Websites"
+            description="We build modern websites for furniture businesses to showcase products and increase sales."
+            features={[
+              "Product catalog",
+              "Category filtering",
+              "Product pages",
+              "Enquiry system",
+              "WhatsApp integration"
+            ]}
+            icon={Sofa}
+            href="https://furniture-beta-coral.vercel.app"
+          />
+
+          <ServiceCard
+            title="Hospital / Clinic Websites"
+            description="Professional healthcare websites for hospitals and clinics."
+            features={[
+              "Doctor profiles",
+              "Appointment booking",
+              "Emergency contact",
+              "Patient information pages"
+            ]}
+            icon={HeartPulse}
+          />
+
+          <ServiceCard
+            title="Restaurant Websites"
+            description="Modern websites for restaurants with menu and ordering features."
+            features={[
+              "Digital menu",
+              "Food gallery",
+              "Online ordering / enquiry",
+              "Table reservation",
+              "Contact integration"
+            ]}
+            icon={UtensilsCrossed}
+          />
+
+          <ServiceCard
+            title="College & Educational Websites"
+            description="Clean and responsive websites for colleges and institutions."
+            features={[
+              "Courses & departments",
+              "Admission details",
+              "Faculty profiles",
+              "Events & announcements"
+            ]}
+            icon={GraduationCap}
+          />
+
+          <ServiceCard
+            title="Corporate / Startup Websites"
+            description="Modern websites for startups and companies to showcase services and products."
+            features={[
+              "Landing pages",
+              "Service sections",
+              "Pricing pages",
+              "Contact forms",
+              "Blog system"
+            ]}
+            icon={Building2}
+          />
+
+          <ServiceCard
+            title="Personal Portfolio Websites"
+            description="Professional portfolio websites for developers, freelancers, and creators."
+            features={["About section", "Skills showcase", "Project gallery", "Contact form"]}
+            icon={UserRound}
+          />
+
+          <ServiceCard
+            title="E-commerce Websites"
+            description="Full online store solutions for businesses."
+            features={[
+              "Product listings",
+              "Cart & checkout",
+              "Payment integration",
+              "Order management"
+            ]}
+            icon={ShoppingCart}
+          />
+        </div>
       </MotionSection>
 
       <MotionSection className="wrapper py-6">
@@ -57,9 +160,9 @@ export default function PortfolioPage() {
             >
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <h3 className="font-space text-2xl font-semibold">{project.title}</h3>
-                {project.flagship ? (
+                {project.subtitle ? (
                   <span className="rounded-full border border-brand/40 bg-brand/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-mint">
-                    Flagship Product
+                    {project.subtitle}
                   </span>
                 ) : null}
               </div>
