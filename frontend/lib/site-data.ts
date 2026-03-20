@@ -72,47 +72,26 @@ export type ProjectItem = {
 
 export const portfolioItems: ProjectItem[] = [
   {
-    title: "ORIN - AI Career Mentorship Mobile App",
-    subtitle: "Sample Product / Demo Application",
-    description:
-      "Sample Product / Demo Application built by Digital Orbit. ORIN is a career mentorship and growth platform that connects students with mentors, provides AI-powered tools, and enables community-based learning.",
-    type: "Mobile Application",
-    platform: "Android APK",
-    features: [
-      "Mentor discovery and booking",
-      "Social learning feed",
-      "AI-powered career guidance",
-      "Community discussions",
-      "Daily quiz and reputation system"
-    ],
-    tech: ["React Native", "Expo", "Firebase / Node backend", "AI Integration"],
-    status: "Demo build available on request",
-    category: "Mobile Applications",
-    caseStudy: "/contact",
-    flagship: false
-  },
-  {
-    title: "Cyber Security Corporate Website",
-    description:
-      "A modern cybersecurity company website showcasing services, security solutions, and professional corporate branding.",
-    type: "Web Application",
+    title: "Furniture Store Website (Demo)",
+    description: "Modern furniture business website showcasing products with enquiry and WhatsApp support.",
+    type: "Website",
     features: [
       "Hero landing page",
-      "Services section",
-      "Security solutions overview",
-      "Contact form",
+      "Product catalog",
+      "Category filtering",
+      "Product pages",
+      "Enquiry system",
       "Fully responsive design"
     ],
-    tech: ["React / Next.js", "Tailwind CSS", "Modern UI components"],
+    tech: ["Next.js", "Tailwind CSS", "Vercel"],
     category: "Web Applications",
-    liveDemo: "https://cyber-three-green.vercel.app",
-    caseStudy: "/contact"
+    liveDemo: "https://furniture-beta-coral.vercel.app"
   },
   {
     title: "Samskruti Engineering College Website",
     description:
       "A modern educational institution website providing course information, campus details, and admission information.",
-    type: "Web Application",
+    type: "Website",
     features: [
       "Courses and departments",
       "Faculty information",
@@ -129,7 +108,7 @@ export const portfolioItems: ProjectItem[] = [
     title: "LifeCare Hospital Website",
     description:
       "A professional healthcare website designed for hospitals and clinics with appointment and service sections.",
-    type: "Web Application",
+    type: "Website",
     features: [
       "Doctor profiles",
       "Medical services",
@@ -146,7 +125,7 @@ export const portfolioItems: ProjectItem[] = [
     title: "Restaurant and Food Business Website",
     description:
       "A modern restaurant website for food businesses featuring menu display, food gallery, and contact options.",
-    type: "Web Application",
+    type: "Website",
     features: [
       "Online menu",
       "Food gallery",
@@ -160,14 +139,20 @@ export const portfolioItems: ProjectItem[] = [
     caseStudy: "/contact"
   },
   {
-    title: "Personal Portfolio Website (Sample)",
+    title: "Cyber Security Corporate Website",
     description:
-      "A professional portfolio website designed for developers or freelancers to showcase projects, skills, and experience.",
-    type: "Web Application",
-    features: ["About section", "Skills showcase", "Project gallery", "Contact form", "Modern design"],
-    tech: ["React", "Tailwind CSS", "Framer Motion animations"],
+      "A modern cybersecurity company website showcasing services, security solutions, and corporate branding.",
+    type: "Website",
+    features: [
+      "Hero landing page",
+      "Services section",
+      "Security solutions overview",
+      "Contact form",
+      "Fully responsive design"
+    ],
+    tech: ["Next.js", "Tailwind CSS", "Modern UI components"],
     category: "Web Applications",
-    liveDemo: "https://portfolio-black-gamma-53.vercel.app",
+    liveDemo: "https://cyber-three-green.vercel.app",
     caseStudy: "/contact"
   }
 ];

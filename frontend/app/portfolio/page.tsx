@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { CTA } from "@/components/CTA";
 import { MotionSection } from "@/components/MotionSection";
 import { ServiceCard } from "@/components/ServiceCard";
-import { portfolioItems } from "@/lib/site-data";
 import {
   Building2,
+  Code2,
   GraduationCap,
   HeartPulse,
+  Lightbulb,
+  Rocket,
   ShoppingCart,
   Sofa,
   UserRound,
@@ -20,10 +21,6 @@ export const metadata: Metadata = {
 };
 
 export default function PortfolioPage() {
-  const mobileProjects = portfolioItems.filter((project) => project.category === "Mobile Applications");
-  const webProjects = portfolioItems.filter((project) => project.category === "Web Applications");
-  const getPrimaryLink = (liveDemo?: string, caseStudy?: string) => liveDemo || caseStudy;
-
   return (
     <main>
       <MotionSection className="wrapper">
@@ -33,28 +30,6 @@ export default function PortfolioPage() {
           Some projects displayed are demonstration projects built by Digital Orbit to showcase our
           design and development capabilities.
         </p>
-      </MotionSection>
-
-      <MotionSection className="wrapper py-6">
-        <article className="panel">
-          <h2 className="font-space text-3xl font-semibold">Our Work</h2>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <div className="rounded-xl border border-line bg-white/5 p-4">
-              <p className="text-sm font-semibold uppercase tracking-wide text-mint">Mobile Applications</p>
-              <p className="mt-2 text-slate-200">ORIN - Sample AI Career Mentorship App</p>
-            </div>
-            <div className="rounded-xl border border-line bg-white/5 p-4">
-              <p className="text-sm font-semibold uppercase tracking-wide text-mint">Web Applications</p>
-              <ul className="mt-2 space-y-1 text-slate-200">
-                <li>Cyber Security Corporate Website</li>
-                <li>College Institution Website</li>
-                <li>Hospital Management Website</li>
-                <li>Restaurant Business Website</li>
-                <li>Portfolio Website (Sample)</li>
-              </ul>
-            </div>
-          </div>
-        </article>
       </MotionSection>
 
       <MotionSection className="wrapper py-6">
@@ -89,6 +64,7 @@ export default function PortfolioPage() {
               "Patient information pages"
             ]}
             icon={HeartPulse}
+            href="https://hospital-one-drab.vercel.app"
           />
 
           <ServiceCard
@@ -102,6 +78,7 @@ export default function PortfolioPage() {
               "Contact integration"
             ]}
             icon={UtensilsCrossed}
+            href="https://restaurants-nu.vercel.app"
           />
 
           <ServiceCard
@@ -114,6 +91,7 @@ export default function PortfolioPage() {
               "Events & announcements"
             ]}
             icon={GraduationCap}
+            href="https://samskruti.vercel.app"
           />
 
           <ServiceCard
@@ -151,143 +129,31 @@ export default function PortfolioPage() {
       </MotionSection>
 
       <MotionSection className="wrapper py-6">
-        <h2 className="font-space text-3xl font-semibold">Mobile Applications</h2>
-        <div className="mt-4 grid gap-4">
-          {mobileProjects.map((project) => (
-            <article
-              key={project.title}
-              className="panel relative border-mint/40 bg-panelSoft transition hover:border-brand/40"
-            >
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <h3 className="font-space text-2xl font-semibold">{project.title}</h3>
-                {project.subtitle ? (
-                  <span className="rounded-full border border-brand/40 bg-brand/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-mint">
-                    {project.subtitle}
-                  </span>
-                ) : null}
-              </div>
-              <p className="mt-3 text-slate-300">{project.description}</p>
-              <div className="mt-4 grid gap-2 text-sm text-slate-300 md:grid-cols-2">
-                <p>
-                  <span className="font-semibold text-slate-100">Type:</span> {project.type}
-                </p>
-                {project.platform ? (
-                  <p>
-                    <span className="font-semibold text-slate-100">Platform:</span> {project.platform}
-                  </p>
-                ) : null}
-                {project.status ? (
-                  <p>
-                    <span className="font-semibold text-slate-100">Status:</span> {project.status}
-                  </p>
-                ) : null}
-              </div>
-              <ul className="mt-4 list-disc space-y-1 pl-5 text-slate-300 marker:text-mint">
-                {project.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
-                ))}
-              </ul>
-              <div className="mt-4 flex flex-wrap gap-2 text-xs">
-                {project.tech.map((tech) => (
-                  <span key={tech} className="rounded-full border border-line px-2 py-1 text-slate-300">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              {getPrimaryLink(project.liveDemo, project.caseStudy) ? (
-                getPrimaryLink(project.liveDemo, project.caseStudy)?.startsWith("http") ? (
-                  <a
-                    href={getPrimaryLink(project.liveDemo, project.caseStudy)}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="absolute inset-0 rounded-2xl"
-                    aria-label={`Open ${project.title}`}
-                  />
-                ) : (
-                  <Link
-                    href={String(getPrimaryLink(project.liveDemo, project.caseStudy))}
-                    className="absolute inset-0 rounded-2xl"
-                    aria-label={`Open ${project.title}`}
-                  />
-                )
-              ) : null}
-              <div className="relative z-10 mt-5 flex flex-wrap gap-3">
-                {project.liveDemo ? (
-                  <a href={project.liveDemo} target="_blank" rel="noreferrer" className="btn-primary">
-                    Live Demo
-                  </a>
-                ) : null}
-                {project.caseStudy ? (
-                  <Link href={project.caseStudy} className="btn-ghost">
-                    View Case Study
-                  </Link>
-                ) : null}
-                {project.github ? (
-                  <a href={project.github} target="_blank" rel="noreferrer" className="btn-ghost">
-                    GitHub
-                  </a>
-                ) : null}
-              </div>
-            </article>
-          ))}
-        </div>
-      </MotionSection>
+        <p className="subtitle">Product Development</p>
+        <h2 className="font-space text-3xl font-semibold">MVPs and Basic Apps for Ideas</h2>
+        <p className="mt-3 max-w-3xl text-slate-300">
+          Have an idea? We can build an MVP, a basic app, or a web application to validate and launch fast.
+        </p>
 
-      <MotionSection className="wrapper py-6">
-        <h2 className="font-space text-3xl font-semibold">Web Applications</h2>
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          {webProjects.map((project) => (
-            <article key={project.title} className="panel relative transition hover:border-brand/40">
-              <h3 className="font-space text-2xl font-semibold">{project.title}</h3>
-              <p className="mt-3 text-slate-300">{project.description}</p>
-              <ul className="mt-4 list-disc space-y-1 pl-5 text-slate-300 marker:text-mint">
-                {project.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
-                ))}
-              </ul>
-              <div className="mt-4 flex flex-wrap gap-2 text-xs">
-                {project.tech.map((tech) => (
-                  <span key={tech} className="rounded-full border border-line px-2 py-1 text-slate-300">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              {getPrimaryLink(project.liveDemo, project.caseStudy) ? (
-                getPrimaryLink(project.liveDemo, project.caseStudy)?.startsWith("http") ? (
-                  <a
-                    href={getPrimaryLink(project.liveDemo, project.caseStudy)}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="absolute inset-0 rounded-2xl"
-                    aria-label={`Open ${project.title}`}
-                  />
-                ) : (
-                  <Link
-                    href={String(getPrimaryLink(project.liveDemo, project.caseStudy))}
-                    className="absolute inset-0 rounded-2xl"
-                    aria-label={`Open ${project.title}`}
-                  />
-                )
-              ) : null}
-              <div className="relative z-10 mt-5 flex flex-wrap gap-3">
-                {project.liveDemo ? (
-                  <a href={project.liveDemo} target="_blank" rel="noreferrer" className="btn-primary">
-                    Live Demo
-                  </a>
-                ) : null}
-                {project.caseStudy ? (
-                  <Link href={project.caseStudy} className="btn-ghost">
-                    View Case Study
-                  </Link>
-                ) : null}
-                {project.github ? (
-                  <a href={project.github} target="_blank" rel="noreferrer" className="btn-ghost">
-                    GitHub
-                  </a>
-                ) : null}
-              </div>
-            </article>
-          ))}
+        <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <ServiceCard
+            title="Startup MVP Development"
+            description="Launch a first version quickly to validate your idea with real users."
+            features={["Scope planning", "Core features only", "Fast iterations", "Launch-ready build"]}
+            icon={Rocket}
+          />
+          <ServiceCard
+            title="Basic Apps for Ideas"
+            description="Simple mobile or web apps to test workflows and solve a specific problem."
+            features={["Clean UI", "Core flows", "Auth (optional)", "Deployment support"]}
+            icon={Lightbulb}
+          />
+          <ServiceCard
+            title="Web and Mobile Applications"
+            description="Modern apps built with scalable architecture for future growth."
+            features={["API integration", "Admin dashboard (optional)", "Performance focused", "Maintainable codebase"]}
+            icon={Code2}
+          />
         </div>
       </MotionSection>
 
