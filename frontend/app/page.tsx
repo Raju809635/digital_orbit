@@ -104,7 +104,7 @@ export default function HomePage() {
                 <div className="mt-3 space-y-3">
                   <div className="flex items-center gap-3 text-sm text-slate-200">
                     <CheckCircle2 className="h-4 w-4 text-mint" />
-                    Idea -> Website -> Real customers
+                    Idea -&gt; Website -&gt; Real customers
                   </div>
                   <div className="flex items-center gap-3 text-sm text-slate-200">
                     <CheckCircle2 className="h-4 w-4 text-mint" />
