@@ -1,15 +1,9 @@
 import Link from "next/link";
 import { MotionSection } from "@/components/MotionSection";
 import { CTA } from "@/components/CTA";
+import { HomeHero } from "@/components/HomeHero";
 import { faqItems, services, testimonials } from "@/lib/site-data";
-import {
-  ArrowRight,
-  CheckCircle2,
-  MessageCircle,
-  Rocket,
-  Sparkles,
-  Zap
-} from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const featuredProof = [
   {
@@ -41,100 +35,7 @@ const featuredProof = [
 export default function HomePage() {
   return (
     <main>
-      <MotionSection className="wrapper pb-8">
-        <a
-          href="https://wa.me/916304679550"
-          target="_blank"
-          rel="noreferrer"
-          className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-panelSoft/95 px-4 py-3 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:scale-[1.01]"
-        >
-          <MessageCircle className="h-4 w-4 text-mint" />
-          WhatsApp Us
-        </a>
-        <p className="subtitle">Digital Orbit Growth Websites</p>
-        <div className="grid items-center gap-8 md:grid-cols-2">
-          <div>
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-4 py-2 text-sm font-semibold text-mint">
-              <Sparkles className="h-4 w-4" />
-              Get your website in 48 hours
-            </div>
-            <h1 className="title-xl">
-              We Build Websites That Bring You Clients
-              <span className="mt-2 block text-mint">Not Just Designs - We Create Growth Machines</span>
-            </h1>
-            <p className="mt-4 max-w-2xl text-slate-300">
-              From idea to website to real customers. We help startups and businesses grow online
-              with conversion-focused websites, MVPs, and mobile apps.
-            </p>
-            <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-200">
-              <span className="rounded-full border border-line bg-white/5 px-3 py-2">Fast delivery</span>
-              <span className="rounded-full border border-line bg-white/5 px-3 py-2">Affordable pricing</span>
-              <span className="rounded-full border border-line bg-white/5 px-3 py-2">Real support</span>
-            </div>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/contact" className="btn-primary">
-                <Rocket className="mr-2 h-4 w-4" />
-                Get My Website
-              </Link>
-              <a
-                href="https://wa.me/916304679550"
-                target="_blank"
-                rel="noreferrer"
-                className="btn-ghost"
-              >
-                <MessageCircle className="mr-2 h-4 w-4" />
-                WhatsApp Us
-              </a>
-            </div>
-          </div>
-          <div className="panel overflow-hidden border-brand/30 bg-gradient-to-br from-panelSoft to-panel">
-            <div className="grid gap-4">
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-wide text-mint">Why people choose us</p>
-                  <h3 className="mt-2 font-space text-2xl font-semibold">From idea to customers</h3>
-                </div>
-                <div className="rounded-2xl border border-brand/30 bg-brand/10 p-3">
-                  <Zap className="h-5 w-5 text-mint" />
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-line bg-white/5 p-4">
-                <p className="text-sm text-slate-300">What we help with</p>
-                <div className="mt-3 space-y-3">
-                  <div className="flex items-center gap-3 text-sm text-slate-200">
-                    <CheckCircle2 className="h-4 w-4 text-mint" />
-                    Idea -&gt; Website -&gt; Real customers
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-slate-200">
-                    <CheckCircle2 className="h-4 w-4 text-mint" />
-                    Startup websites, MVPs, and business landing pages
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-slate-200">
-                    <CheckCircle2 className="h-4 w-4 text-mint" />
-                    Affordable builds for founders, students, and local brands
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid gap-3 sm:grid-cols-3">
-                <div className="rounded-xl border border-line bg-white/5 p-4">
-                  <p className="font-space text-2xl font-semibold">48h</p>
-                  <p className="text-sm text-slate-300">Fast-start delivery option</p>
-                </div>
-                <div className="rounded-xl border border-line bg-white/5 p-4">
-                  <p className="font-space text-2xl font-semibold">3</p>
-                  <p className="text-sm text-slate-300">Slots left this week</p>
-                </div>
-                <div className="rounded-xl border border-line bg-white/5 p-4">
-                  <p className="font-space text-2xl font-semibold">1:1</p>
-                  <p className="text-sm text-slate-300">Support from real developers</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </MotionSection>
+      <HomeHero />
 
       <MotionSection className="wrapper py-6">
         <p className="subtitle">Services Overview</p>
