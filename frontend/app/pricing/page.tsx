@@ -1,29 +1,33 @@
 import type { Metadata } from "next";
 import { CTA } from "@/components/CTA";
 import { MotionSection } from "@/components/MotionSection";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Pricing",
-  description: "Digital Orbit pricing packages for landing pages, startup websites, MVP prototypes, and full product development."
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Pricing - Affordable Websites India",
+  description:
+    "View Digital Orbit pricing for affordable websites in India, startup MVPs, landing pages, and full digital product development.",
+  path: "/pricing",
+  keywords: ["affordable websites India", "website development pricing India", "startup website cost India"]
+});
 
 const plans = [
   {
     name: "Starter",
-    price: "₹1999",
+    price: "Rs. 1999",
     description: "Basic portfolio or landing page.",
     features: ["Single page website", "Modern responsive design", "Basic SEO setup"]
   },
   {
     name: "Startup",
-    price: "₹3999",
+    price: "Rs. 3999",
     description: "Startup website or MVP prototype.",
     features: ["Multi-page startup website", "MVP wireframe/prototype", "Tech consultation"],
     featured: true
   },
   {
     name: "Business",
-    price: "₹9999+",
+    price: "Rs. 9999+",
     description: "Full product development.",
     features: ["Custom product architecture", "Backend API development", "Launch support"]
   }

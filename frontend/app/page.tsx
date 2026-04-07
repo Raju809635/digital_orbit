@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { MotionSection } from "@/components/MotionSection";
 import { CTA } from "@/components/CTA";
 import { HomeHero } from "@/components/HomeHero";
 import { faqItems, services, testimonials } from "@/lib/site-data";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Affordable Website Development and App Development India",
+  description:
+    "Digital Orbit builds affordable websites in India, startup MVPs, landing pages, and mobile apps for founders, startups, and local businesses.",
+  path: "/",
+  keywords: ["website development India", "app development India", "affordable websites India"]
+});
 
 const featuredProof = [
   {

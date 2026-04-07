@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import { CTA } from "@/components/CTA";
 import { MotionSection } from "@/components/MotionSection";
 import { processSteps } from "@/lib/site-data";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Our Process",
-  description: "Understand Digital Orbit's four-step workflow from idea to launch."
-};
+  description:
+    "See how Digital Orbit turns ideas into launch-ready websites and apps through a simple four-step development process.",
+  path: "/process",
+  keywords: ["website development process", "app development workflow", "startup product process"]
+});
 
 export default function ProcessPage() {
   return (

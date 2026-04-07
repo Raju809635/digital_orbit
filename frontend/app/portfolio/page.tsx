@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CTA } from "@/components/CTA";
 import { MotionSection } from "@/components/MotionSection";
 import { ServiceCard } from "@/components/ServiceCard";
+import { buildMetadata } from "@/lib/seo";
 import {
   Building2,
   Code2,
@@ -15,10 +16,13 @@ import {
   UtensilsCrossed
 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Explore Digital Orbit project examples including portfolio websites, landing pages, and platforms."
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Portfolio and Website Examples",
+  description:
+    "Explore Digital Orbit website examples for restaurants, hospitals, colleges, startups, and businesses across India.",
+  path: "/portfolio",
+  keywords: ["website portfolio India", "business website examples", "affordable websites India examples"]
+});
 
 export default function PortfolioPage() {
   return (

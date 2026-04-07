@@ -103,9 +103,9 @@ export default function ContactPage() {
                   required
                 >
                   <option value="">Select budget</option>
-                  <option value="₹1999 - ₹3999">₹1999 - ₹3999</option>
-                  <option value="₹4000 - ₹9999">₹4000 - ₹9999</option>
-                  <option value="₹10000+">₹10000+</option>
+                  <option value="Rs. 1999 - Rs. 3999">Rs. 1999 - Rs. 3999</option>
+                  <option value="Rs. 4000 - Rs. 9999">Rs. 4000 - Rs. 9999</option>
+                  <option value="Rs. 10000+">Rs. 10000+</option>
                 </select>
               </label>
 

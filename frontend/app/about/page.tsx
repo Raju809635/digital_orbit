@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { CTA } from "@/components/CTA";
 import { MotionSection } from "@/components/MotionSection";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About",
-  description: "Learn what Digital Orbit does and how we help founders build launch-ready products."
-};
+export const metadata: Metadata = buildMetadata({
+  title: "About Digital Orbit",
+  description:
+    "Learn how Digital Orbit helps startups and businesses with website development, MVP builds, and app development in India.",
+  path: "/about",
+  keywords: ["about digital orbit", "website development team India", "affordable web agency India"]
+});
 
 export default function AboutPage() {
   return (
