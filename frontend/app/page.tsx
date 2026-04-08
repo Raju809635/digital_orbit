@@ -8,11 +8,16 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Affordable Website Development and App Development India",
+  title: "Best Website Developer in Hyderabad | Affordable and Fast",
   description:
-    "Digital Orbit builds affordable websites in India, startup MVPs, landing pages, and mobile apps for founders, startups, and local businesses.",
+    "Digital Orbit is a website developer in Hyderabad building affordable websites, landing pages, MVPs, and apps for businesses in Ghatkesar, Telangana, and across India. Message us on WhatsApp.",
   path: "/",
-  keywords: ["website development India", "app development India", "affordable websites India"]
+  keywords: [
+    "website developer in Hyderabad",
+    "web design Hyderabad",
+    "app development Hyderabad",
+    "affordable website India"
+  ]
 });
 
 const featuredProof = [
@@ -48,6 +53,27 @@ export default function HomePage() {
       <HomeHero />
 
       <MotionSection className="wrapper py-6">
+        <p className="subtitle">Local SEO Focus</p>
+        <h2 className="title-lg">Serving Hyderabad, Ghatkesar, and Telangana</h2>
+        <p className="mt-3 max-w-3xl text-slate-300">
+          If you are searching for a website developer in Hyderabad, web design in Hyderabad, or app
+          development in Telangana, Digital Orbit is built for that exact need. We work with local
+          businesses, startups, and founders who need affordable websites and clear execution.
+        </p>
+        <div className="mt-5 flex flex-wrap gap-3">
+          <Link href="/website-development-hyderabad" className="btn-ghost">
+            Website Development Hyderabad
+          </Link>
+          <Link href="/app-development-hyderabad" className="btn-ghost">
+            App Development Hyderabad
+          </Link>
+          <Link href="/affordable-website-india" className="btn-ghost">
+            Affordable Website India
+          </Link>
+        </div>
+      </MotionSection>
+
+      <MotionSection className="wrapper py-6">
         <p className="subtitle">Services Overview</p>
         <h2 className="title-lg">Everything Needed to Launch</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
@@ -78,7 +104,8 @@ export default function HomePage() {
             <h3 className="font-space text-2xl font-semibold">Why clients trust the team</h3>
             <p className="mt-3 text-slate-300">
               We are a team of passionate developers helping startups go online affordably. Our goal
-              is simple: launch something strong enough to win trust and start conversations fast.
+              is simple: launch something strong enough to win trust and start conversations fast in
+              Hyderabad, Ghatkesar, Telangana, and across India.
             </p>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-300 marker:text-mint">
               <li>Startup founders and early-stage teams</li>

@@ -4,11 +4,11 @@ import { MotionSection } from "@/components/MotionSection";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Digital Orbit",
+  title: "About Digital Orbit - Website Developer in Hyderabad",
   description:
-    "Learn how Digital Orbit helps startups and businesses with website development, MVP builds, and app development in India.",
+    "Learn how Digital Orbit helps businesses in Hyderabad, Ghatkesar, and Telangana with website development, app development, and MVP builds.",
   path: "/about",
-  keywords: ["about digital orbit", "website development team India", "affordable web agency India"]
+  keywords: ["about digital orbit", "website developer Hyderabad", "web design team Telangana"]
 });
 
 export default function AboutPage() {

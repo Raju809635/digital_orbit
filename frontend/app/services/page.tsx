@@ -5,11 +5,11 @@ import { services } from "@/lib/site-data";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services - Website and App Development",
+  title: "Website and App Development Services in Hyderabad",
   description:
-    "Explore Digital Orbit services for website development, startup MVP development, mobile app development, and digital product consulting.",
+    "Explore Digital Orbit services for website development in Hyderabad, app development in Telangana, startup MVPs, and affordable websites in India.",
   path: "/services",
-  keywords: ["website development services", "app development services", "mvp development services India"]
+  keywords: ["website development Hyderabad", "app development Hyderabad", "affordable website India"]
 });
 
 export default function ServicesPage() {

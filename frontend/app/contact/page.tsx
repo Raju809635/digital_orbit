@@ -2,10 +2,12 @@
 
 import { FormEvent, useMemo, useState } from "react";
 import { MotionSection } from "@/components/MotionSection";
+import { trackEvent } from "@/lib/gtag";
 
 type FormState = {
   name: string;
   email: string;
+  businessType: string;
   projectIdea: string;
   budget: string;
 };
@@ -13,6 +15,7 @@ type FormState = {
 const initialState: FormState = {
   name: "",
   email: "",
+  businessType: "",
   projectIdea: "",
   budget: ""
 };
@@ -32,17 +35,26 @@ export default function ContactPage() {
       const response = await fetch(`${apiBase}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form)
+        body: JSON.stringify({
+          ...form,
+          sourcePage: window.location.pathname
+        })
       });
 
       if (!response.ok) {
-        throw new Error("Unable to submit form");
+        const data = (await response.json().catch(() => null)) as { message?: string } | null;
+        throw new Error(data?.message || "Unable to submit form");
       }
 
       setStatus("Thanks. Your message was sent successfully.");
+      trackEvent("form_submit", {
+        form_name: "contact_form",
+        business_type: form.businessType,
+        budget: form.budget
+      });
       setForm(initialState);
-    } catch {
-      setStatus("Submission failed. Please try again or contact us on WhatsApp.");
+    } catch (error) {
+      setStatus(error instanceof Error ? error.message : "Submission failed. Please try again or contact us on WhatsApp.");
     } finally {
       setSubmitting(false);
     }
@@ -85,6 +97,17 @@ export default function ContactPage() {
               </label>
 
               <label className="block text-sm font-semibold text-slate-200">
+                Business Type
+                <input
+                  className="mt-1 w-full rounded-lg border border-line bg-black/20 px-3 py-2"
+                  value={form.businessType}
+                  onChange={(event) => setForm((prev) => ({ ...prev, businessType: event.target.value }))}
+                  placeholder="Startup, clinic, restaurant, portfolio, etc."
+                  required
+                />
+              </label>
+
+              <label className="block text-sm font-semibold text-slate-200">
                 Project Idea
                 <textarea
                   className="mt-1 min-h-28 w-full rounded-lg border border-line bg-black/20 px-3 py-2"
@@ -113,7 +136,9 @@ export default function ContactPage() {
                 {submitting ? "Sending..." : "Submit Inquiry"}
               </button>
             </form>
-            {status ? <p className="mt-3 text-sm text-mint">{status}</p> : null}
+            {status ? (
+              <p className={`mt-3 text-sm ${status.startsWith("Thanks") ? "text-mint" : "text-amber-300"}`}>{status}</p>
+            ) : null}
           </article>
 
           <article className="panel">

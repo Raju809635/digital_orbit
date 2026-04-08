@@ -75,3 +75,12 @@ After setup, every contact submission:
 
 - sends an email notification
 - appends a row to your Google Sheet
+
+Contact form lead fields:
+
+- Name
+- Email
+- Business Type
+- Project Idea
+- Budget
+- Source Page

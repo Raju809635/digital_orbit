@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { CheckCircle2, MessageCircle, Rocket, Sparkles, Zap } from "lucide-react";
+import { CheckCircle2, Rocket, Sparkles, Zap } from "lucide-react";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const heroPoints = [
   "Idea to website to real customers",
@@ -19,16 +20,6 @@ const floatingCards = [
 export function HomeHero() {
   return (
     <section className="wrapper pb-8">
-      <a
-        href="https://wa.me/916304679550"
-        target="_blank"
-        rel="noreferrer"
-        className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-panelSoft/95 px-4 py-3 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:scale-[1.01]"
-      >
-        <MessageCircle className="h-4 w-4 text-mint" />
-        WhatsApp Us
-      </a>
-
       <div className="relative overflow-hidden rounded-[2rem] border border-line/80 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.18),transparent_32%),radial-gradient(circle_at_78%_18%,rgba(129,140,248,0.22),transparent_28%),linear-gradient(135deg,#0b1221_0%,#121f38_45%,#0b1221_100%)] px-6 py-10 shadow-glow md:px-10 md:py-12">
         <motion.div
           className="absolute -left-16 top-8 h-52 w-52 rounded-full bg-cyan-400/15 blur-3xl"
@@ -85,8 +76,9 @@ export function HomeHero() {
               transition={{ duration: 0.65, delay: 0.15 }}
               className="mt-4 max-w-2xl text-lg text-slate-200/90"
             >
-              From idea to website to real customers. We help startups and businesses grow online
-              with conversion-focused websites, MVPs, and mobile apps.
+              From idea to website to real customers. We help startups and businesses in Hyderabad,
+              Ghatkesar, Telangana, and across India grow online with conversion-focused websites,
+              MVPs, and mobile apps.
             </motion.p>
 
             <motion.div
@@ -112,15 +104,10 @@ export function HomeHero() {
                 <Rocket className="mr-2 h-4 w-4" />
                 Get My Website
               </Link>
-              <a
-                href="https://wa.me/916304679550"
-                target="_blank"
-                rel="noreferrer"
+              <WhatsAppButton
+                source="hero"
                 className="btn-ghost border-white/15 bg-white/8 backdrop-blur-sm"
-              >
-                <MessageCircle className="mr-2 h-4 w-4" />
-                WhatsApp Us
-              </a>
+              />
             </motion.div>
           </div>
 
@@ -211,4 +198,3 @@ export function HomeHero() {
     </section>
   );
 }
-

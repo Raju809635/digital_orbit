@@ -4,11 +4,11 @@ import { MotionSection } from "@/components/MotionSection";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Pricing - Affordable Websites India",
+  title: "Affordable Website Pricing in Hyderabad and India",
   description:
-    "View Digital Orbit pricing for affordable websites in India, startup MVPs, landing pages, and full digital product development.",
+    "View Digital Orbit pricing for affordable websites in Hyderabad, Ghatkesar, Telangana, and across India including startup websites, MVPs, and landing pages.",
   path: "/pricing",
-  keywords: ["affordable websites India", "website development pricing India", "startup website cost India"]
+  keywords: ["affordable website Hyderabad", "affordable websites India", "website development pricing Hyderabad"]
 });
 
 const plans = [

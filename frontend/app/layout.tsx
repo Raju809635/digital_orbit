@@ -8,6 +8,7 @@ import "./globals.css";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { buildMetadata, localBusinessJsonLd, siteUrl } from "@/lib/seo";
 
 const manrope = Manrope({
@@ -22,17 +23,18 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: "Digital Orbit - Website Development and App Development India",
+    title: "Best Website Developer in Hyderabad | Affordable and Fast",
     description:
-      "Digital Orbit builds affordable websites in India, startup MVPs, mobile apps, and business websites that help founders and local brands grow online.",
+      "Digital Orbit is a website developer in Hyderabad building affordable websites, MVPs, and app solutions for businesses in Ghatkesar, Telangana, and across India. Start your project on WhatsApp.",
     keywords: [
-      "affordable website development India",
-      "website development for local business",
-      "startup app development India"
+      "website developer in Hyderabad",
+      "web design Hyderabad",
+      "app development Hyderabad",
+      "affordable website India"
     ]
   }),
   title: {
-    default: "Digital Orbit - Website Development and App Development India",
+    default: "Best Website Developer in Hyderabad | Digital Orbit",
     template: "%s | Digital Orbit"
   },
   metadataBase: new URL(siteUrl)
@@ -52,6 +54,10 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <NavBar />
         {children}
         <Footer />
+        <WhatsAppButton
+          source="floating_button"
+          className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-panelSoft/95 px-4 py-3 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:scale-[1.01]"
+        />
         <Analytics />
         <SpeedInsights />
       </body>

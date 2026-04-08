@@ -17,11 +17,11 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Portfolio and Website Examples",
+  title: "Portfolio - Website Developer in Hyderabad",
   description:
-    "Explore Digital Orbit website examples for restaurants, hospitals, colleges, startups, and businesses across India.",
+    "Explore Digital Orbit website examples for businesses in Hyderabad, Ghatkesar, Telangana, and across India including restaurants, hospitals, colleges, and startups.",
   path: "/portfolio",
-  keywords: ["website portfolio India", "business website examples", "affordable websites India examples"]
+  keywords: ["website developer Hyderabad portfolio", "web design Hyderabad examples", "affordable websites India examples"]
 });
 
 export default function PortfolioPage() {

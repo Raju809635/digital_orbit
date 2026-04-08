@@ -5,11 +5,11 @@ import { processSteps } from "@/lib/site-data";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Process",
+  title: "Our Process - Website Development Hyderabad",
   description:
-    "See how Digital Orbit turns ideas into launch-ready websites and apps through a simple four-step development process.",
+    "See how Digital Orbit turns ideas into launch-ready websites and apps for clients in Hyderabad, Ghatkesar, Telangana, and across India.",
   path: "/process",
-  keywords: ["website development process", "app development workflow", "startup product process"]
+  keywords: ["website development process Hyderabad", "app development workflow Hyderabad", "startup product process"]
 });
 
 export default function ProcessPage() {
