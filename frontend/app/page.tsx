@@ -30,6 +30,14 @@ const featuredProof = [
     link: "https://restaurants-nu.vercel.app"
   },
   {
+    title: "Real Estate Website",
+    clientType: "Property business",
+    problem: "Needed a premium digital presence to showcase listings and generate direct property enquiries.",
+    result: "Built a modern real estate website with strong presentation, browsing flow, and lead capture focus.",
+    bullets: ["Property-focused layout", "Trust-first design", "Enquiry-driven experience"],
+    link: "https://real-estate-frontend-iota-eosin.vercel.app"
+  },
+  {
     title: "College Website",
     clientType: "Educational institution",
     problem: "Needed a clean way to present admissions, departments, and campus highlights.",
@@ -132,7 +140,7 @@ export default function HomePage() {
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {featuredProof.map((item) => (
             <article
               key={item.title}
